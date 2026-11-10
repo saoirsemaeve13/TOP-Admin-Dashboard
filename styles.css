@@ -72,6 +72,13 @@ svg {
 
 .search-bar {
   flex-basis: 48%;
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar > * {
+  align-self: center;
 }
 
 .profile {
@@ -87,7 +94,7 @@ svg {
 .greeting {
   flex-basis: 48%;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: auto 1fr;
   grid-template-rows: auto;
 }
 
@@ -102,6 +109,7 @@ svg {
 
 .greeting-avatar {
   grid-area: 1 / 1 / 3 / 2;
+  margin: 10px;
 }
 
 .greeting-text {
@@ -118,10 +126,44 @@ svg {
   justify-content: flex-end;
   align-items: center;
   margin: 10px;
-  gap: 20px;
+  margin-right: 20px;
+  gap: 40px;
 }
 
 main {
   grid-area: 2 / 2 / 3 / 3;
   background-color: var(--silver);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.main-projects {
+  grid-area: 1 / 1 / 3 / 2;
+  background-color: var(--pumpkin);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-announcements {
+  grid-area: 1 / 2 / 2 / 3;
+  background-color: var(--silver);
+}
+
+.main-trending {
+  grid-area: 2 / 2 / 3 / 3;
+  background-color: var(--moss-green);
+}
+
+button {
+  background-color: var(--pumpkin);
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px var(--muted-grey);
+}
+
+.project-card {
+  background-color: var(--bone-white);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
 }
