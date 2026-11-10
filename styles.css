@@ -34,8 +34,12 @@ body {
 }
 
 header {
-  grid-area: 1 / 2 / 2 / 2;
+  grid-area: 1 / 2 / 2 / 3;
   background-color: var(--bone-white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
 }
 
 aside {
@@ -59,6 +63,62 @@ svg {
   font-size: 2em;
   display: flex;
   align-items: center;
+}
+
+.avatar {
+  height: 2em;
+  width: 2em;
+}
+
+.search-bar {
+  flex-basis: 48%;
+}
+
+.profile {
+  flex-basis: 48%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+}
+.profile > * {
+  margin: 10px;
+}
+.greeting {
+  flex-basis: 48%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+}
+
+.greeting > svg {
+  height: 4em;
+  width: 4em;
+}
+
+.user {
+  font-size: 1.5em;
+}
+
+.greeting-avatar {
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.greeting-text {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.greeting-user {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.header-buttons {
+  flex-basis: 48%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+  gap: 20px;
 }
 
 main {
