@@ -28,7 +28,7 @@ li {
 body {
   display: grid;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 6fr;
 }
@@ -75,6 +75,24 @@ svg {
   margin: 10px;
   display: flex;
   gap: 10px;
+}
+
+.search-bar input,
+.search-bar [type="search"] {
+  width: 80%;
+  background-color: var(--silver);
+  color: var(--muted-grey);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-bar input:focus {
+  background-color: var(--bone-white);
+  border: 1px solid var(--pumpkin);
+  box-shadow: 0 2px 8px var(--silver);
 }
 
 .search-bar > * {
@@ -183,12 +201,24 @@ button {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border-left: 6px solid var(--pumpkin);
+}
+
+.project-card > p {
+  margin-top: 10px;
+}
+
+.project-card-icons {
+  display: flex;
+  align-self: flex-end;
+  gap: 20px;
 }
 
 .announcements-card {
   background-color: var(--bone-white);
   border-radius: 15px;
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
 }
 
@@ -203,11 +233,14 @@ hr {
   border-radius: 15px;
   margin: 10px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .trending-user {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   margin: 10px;
   font-size: smaller;
 }
